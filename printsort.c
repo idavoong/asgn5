@@ -17,9 +17,12 @@ void readstring(char mystring[]) {
        c = getchar();
        i++;
     }
+    mystring[i] = '\0';
 }
 
-void main() {
+int main(void) {
+    int j = 0;
+    int k = 0;
     printf("Enter word: ");
     c = getchar();
     while (c != end) {
@@ -27,8 +30,8 @@ void main() {
         printf("Original word: ");
         printf("%s\n", mystring);
         printf("Alphabetized word: ");
-        for (int j = 33; j <= 126; j++) {
-            for (int k = 0; k < i; k++) {
+        for (j = 0; j <= 126; j++) {
+            for (k = 0; k < i; k++) {
                 if (mystring[k] == j) {
                     printf("%c", mystring[k]);
                 }
@@ -38,4 +41,5 @@ void main() {
         c = getchar();
     }
     printf("\nExiting");
+    return 0;
 }
