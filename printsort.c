@@ -17,6 +17,7 @@ void readstring(char mystring[]) {
        c = getchar();
        i++;
     }
+    mystring[i] = '\0';
 }
 
 int main() {
